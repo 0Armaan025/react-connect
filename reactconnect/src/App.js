@@ -4,11 +4,14 @@ import Home from "./screens/home/Home";
 import CreateSpace from "./screens/create-space/CreateSpace";
 import Blogs from "./screens/blog/Blogs";
 import AddBlog from "./screens/addblog/AddBlog";
-import Forums from "./screens/forums/Forums";
+// import Forums from "./screens/forums/Forums";
 import NewQuestionsList from "./components/questionlist/NewQuestionList";
 import CodeEditor from './screens/Editor/Editor'
 import Profile from "./screens/profile/Profile";
 import Leaderboard from "./screens/Leaderboard/myLeaderboard";
+
+import VideoCall from "./components/videoCall/VideoCall";
+
 import SplitContainer from "./components/split_container/SplitContainer";
 function App() {
   return (
