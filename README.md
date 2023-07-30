@@ -2,7 +2,8 @@
 # ReactConnect #
 
 
-![image](https://github.com/0Armaan025/react-connect/assets/113763427/19f17d28-cb1e-4390-a005-c8c642b1c818)
+![image](https://github.com/0Armaan025/react-connect/assets/113763427/1f9f0c11-a9f4-4bbf-bf06-7e54a464bd19)
+
 
 
 <br />
