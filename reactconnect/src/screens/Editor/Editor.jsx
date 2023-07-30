@@ -9,8 +9,8 @@ import "prismjs/themes/prism-okaidia.css";
 import "./editor.css";
 const socket = io("http://localhost:3001"); // Connect to the Socket.IO server
 
-const CodeEditor = () => {
-  const [code, setCode] = useState("");
+const CodeEditor = ({content}) => {
+  const [code, setCode] = useState(content);
 
   // Emit code changes to the backend when 'code' state changes
 

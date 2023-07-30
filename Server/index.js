@@ -38,6 +38,8 @@ const Space = mongoose.model('Space', spaceScheme);
 // Middleware to parse JSON in request body
 app.use(bodyParser.json());
 
+
+
 // API endpoint to add a new blog
 app.post('/api/blogs', async (req, res) => {
   try {

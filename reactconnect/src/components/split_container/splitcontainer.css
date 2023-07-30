@@ -1,0 +1,80 @@
+/* splitcontainer.css */
+
+/* Common styles for the sidebar and the editor */
+.container {
+    height: 100%;
+    overflow-x: hidden;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Styles for the sidebar (Files) */
+  .files {
+    background-color: #262626;
+    color: #fff;
+    padding: 10px;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  
+  .files h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    /* margin-left: 20px; */
+    border-bottom: 1px solid #555;
+  }
+  
+  .files ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .files li {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 13px;
+    transition: background-color 0.2s;
+  }
+  
+  .files li:hover {
+    background-color: #444;
+  }
+  
+  .files li.selected {
+    background-color: #007bff;
+  }
+  
+  /* Styles for the editor */
+  .codeEditor {
+    background-color: #1e1e1e;
+    color: #fff;
+    padding: 20px;
+    height: 100%;
+    font-size: 16px;
+  }
+  
+  /* VSCode-like folder icon */
+  .files li.folder::before {
+    content: "\f07b";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 8px;
+  }
+  
+  /* Add a divider between sidebar and editor */
+  .container .gutter {
+    background-color: #444;
+    cursor: col-resize;
+    width: 5px;
+  }
+  
+  /* Hide the gutter when collapsed */
+  .container .gutter.disabled {
+    width: 0;
+    cursor: auto;
+  }
+  

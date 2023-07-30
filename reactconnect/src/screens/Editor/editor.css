@@ -2,10 +2,16 @@
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: #90a4ae;
+  color: grey;
 }
 .token.punctuation {
   color: #9e9e9e;
+}
+.codeEditor {
+  
+  overflow-y: auto;
+  margin: 0;
+  padding:0;
 }
 .editorBtn {
   margin: 20px;

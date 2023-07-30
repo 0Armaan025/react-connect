@@ -9,8 +9,7 @@ import NewQuestionsList from "./components/questionlist/NewQuestionList";
 import CodeEditor from './screens/Editor/Editor'
 import Profile from "./screens/profile/Profile";
 import Leaderboard from "./screens/Leaderboard/myLeaderboard";
-
-
+import SplitContainer from "./components/split_container/SplitContainer";
 function App() {
   return (
     <>
@@ -23,7 +22,7 @@ function App() {
       <Route exact path="/profile" element={<Profile/>} />
       <Route exact path="/leaderboard" element={<Leaderboard/>} />
       <Route exact path="/space/:token/editor" element={<CodeEditor/>} />
-    
+      <Route exact path="/editor" element={<SplitContainer/>} />
    </Routes>
    </>  
   );
