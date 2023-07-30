@@ -1,9 +1,14 @@
+
 # ReactConnect #
+
+
+![image](https://github.com/0Armaan025/react-connect/assets/113763427/19f17d28-cb1e-4390-a005-c8c642b1c818)
+
 
 <br />
 
 
-## Inspiration 💡
+## 💡 Inspiration
 "Inspired by the spirit of collaboration and the power of collective creativity, ReactConnect aims to revolutionize the way developers work together on React projects.
 We believe that seamless teamwork and real-time interaction can elevate the coding experience to new heights. By drawing inspiration from the fluidity of Google Docs, ReactConnect empowers developers to connect, innovate, and thrive, fostering a community where ideas flow effortlessly and brilliant solutions come to life. 
 Join us on this inspiring journey of fearless collaboration, where boundaries fade away, and the possibilities of React development are limitless. Together, let's build a brighter and connected coding future with ReactConnect."
