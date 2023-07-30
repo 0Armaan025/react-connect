@@ -14,18 +14,18 @@ const rootElement = document.getElementById('root');
 ReactDOM.render(
   <React.StrictMode>
     <Auth0Provider
-      domain="reactconnect.us.auth0.com"
-      clientId="ZRruxpFyZBBiRzyPyxaASD9bdRWr6wTp"
-      authorizationParams={{
-        redirect_uri: window.location.origin
-      }}
-    >
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </Auth0Provider>
+    domain="reactconnect.us.auth0.com"
+    clientId="d4wP9LVwVJbjnik3qewFaKHplb2CMKpk"
+    authorizationParams={{
+      redirect_uri: window.location.origin
+    }}
+  >
+    <BrowserRouter>
+    <App />
+    </BrowserRouter>
+  </Auth0Provider>,
   </React.StrictMode>,
-  rootElement
+  document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

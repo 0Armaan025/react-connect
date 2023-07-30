@@ -23,8 +23,11 @@ const blogSchema = new mongoose.Schema({
   author: { type: String, required: true },
 });
 
+
+
 const spaceScheme = new mongoose.Schema({
   name: { type: String, required: true },
+  token: { type: String, required: true },
   repoLink: { type: String, required: true },
   description: { type: String, required: true },
 });
@@ -47,12 +50,29 @@ app.post('/api/blogs', async (req, res) => {
   }
 });
 
+function generateRandomToken(length) {
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  let token = '';
+  for (let i = 0; i < length; i++) {
+    const randomIndex = Math.floor(Math.random() * characters.length);
+    token += characters[randomIndex];
+  }
+  return token;
+}
+
+
 app.post('/api/space', async (req, res) => {
   try {
+    const token = generateRandomToken(16);
+    console.log(req.body);
     const { name, repoLink, description } = req.body;
-    const newBlog = new Space({ name, repoLink, description });
+    const newBlog = new Space({ name, token, repoLink, description });
+    
     await newBlog.save();
-    res.status(201).json({ message: 'Space created successfully' });
+    console.log('done')
+    
+    res.status(200).json({ message: 'Space created successfully' , token: token});
+
   } catch (error) {
     res.status(500).json({ error: 'Failed to create space' });
   }

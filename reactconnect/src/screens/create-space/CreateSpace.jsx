@@ -28,6 +28,8 @@ const CreateSpace = () => {
       const response = await axios.get(`http://localhost:5000/api/space/${name}`);
       const { exists } = response.data;
       if (exists) {
+        // c(response)
+        // window.location.href = `http://localhost:3000/space/${token}/editor`;
         console.log('Space found! You can join now.');
         // Optionally, show a success message or navigate the user to the space.
       } else {
@@ -46,8 +48,8 @@ const CreateSpace = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // Check if the space name already exists before submitting
       const response = await axios.get(`http://localhost:5000/api/space/${name}`);
+      
       const { exists } = response.data;
 
       if (exists) {
@@ -56,15 +58,17 @@ const CreateSpace = () => {
       }
 
       const newBlogData = { name, repoLink, description };
-      await axios.post('http://localhost:5000/api/space', newBlogData);
+      const newResponse = await axios.post('http://localhost:5000/api/space', newBlogData);
+      console.log(newResponse);
+      const token = newResponse.data.token;
       console.log('Space submitted!');
+      // console.log(token)
       setName('');
       setRepoLink('');
       setDescription('');
-      // Optionally, you can add a success message or redirect the user to a different page.
+      window.location.href = `http://localhost:3000/space/${token}/editor`;
     } catch (error) {
       console.error('Space not submitted', error);
-      // Handle the error, show an error message, or do whatever you need to do.
     }
   };
 

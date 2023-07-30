@@ -79,8 +79,8 @@ const CodeEditor = () => {
           }}
         />
       </div>
-      <button onClick={handleSaveCodeVersion}>Save Code Version</button>
-      <button onClick={formatCode}>Format Code</button>
+      <button onClick={handleSaveCodeVersion} className="editorBtn">Save Code Version</button>
+      <button onClick={formatCode} className="editorBtn">Format Code</button>
     </div>
   );
 };

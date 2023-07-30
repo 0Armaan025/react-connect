@@ -17,6 +17,7 @@
     "bootstrap": "^5.3.1",
     "graphql": "^15.8.0",
     "nodemon": "^3.0.1",
+    "peer": "^1.0.0",
     "prismjs": "^1.29.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

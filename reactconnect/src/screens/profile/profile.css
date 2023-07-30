@@ -1,0 +1,82 @@
+/* UserProfile.css */
+
+/* Container for the whole profile */
+.profile-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: Arial, sans-serif;
+  transform-style: preserve-3d; /* Ensure child elements retain 3D perspective */
+}
+
+/* Profile header containing the image, name, and email */
+.profile-header {
+  margin-bottom: 20px;
+}
+
+/* Profile image */
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 0 0 6px #ddd;
+  animation: rotateProfile 5s linear infinite; /* Apply the rotation animation */
+}
+
+/* Keyframes animation for rotating the profile image */
+@keyframes rotateProfile {
+  from {
+    transform: rotateY(0deg); /* Initial rotation angle */
+  }
+  to {
+    transform: rotateY(360deg); /* Final rotation angle (360 degrees) */
+  }
+}
+
+/* Profile name */
+.profile-name {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+/* Profile email */
+.profile-email {
+  color: #666;
+}
+
+/* GitHub stats section */
+.profile-stats {
+  margin-bottom: 20px;
+}
+
+/* GitHub followers and repos */
+.github-followers,
+.github-repos {
+  color: lightgrey;
+  margin: 5px 0;
+}
+
+/* Profile details section */
+.profile-details {
+  margin-bottom: 20px;
+}
+
+/* Sessions attended and number of badges */
+.sessions-attended,
+.num-of-badges,
+.title {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.title {
+  font-size: 25px;
+}

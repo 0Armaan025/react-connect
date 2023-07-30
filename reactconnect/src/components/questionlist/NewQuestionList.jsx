@@ -22,7 +22,7 @@ const NewQuestionsList = () => {
         },
         {
           headers: {
-            Authorization: `token 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`,
+            Authorization: `token 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`,
           },
         }
       );
@@ -49,7 +49,7 @@ const NewQuestionsList = () => {
           'https://api.github.com/repos/0Armaan025/tiktok_clone/issues',
           {
             headers: {
-              Authorization: `token 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`,
+              Authorization: `token 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`,
             },
           }
         );
@@ -60,7 +60,7 @@ const NewQuestionsList = () => {
               issue.comments_url,
               {
                 headers: {
-                  Authorization: `token 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`,
+                  Authorization: `token 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`,
                 },
               }
             );
@@ -95,7 +95,7 @@ const NewQuestionsList = () => {
         `https://api.github.com/repos/0Armaan025/tiktok_clone/issues/comments/${commentId}`,
         {
           headers: {
-            Authorization: `token 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`,
+            Authorization: `token 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`,
           },
         }
       );

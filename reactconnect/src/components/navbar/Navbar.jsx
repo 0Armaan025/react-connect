@@ -9,7 +9,7 @@ const NavBar = () => {
         <nav className="navbar navbar-expand-lg" id="navbar">
           {/* <nav className="navbar" id="navbar"> */}
           {/* <div className="container-fluid"> */}
-          <a className="navbar-brand" href="#">ReactConnect</a>
+          <Link className="navbar-brand" to="/">ReactConnect</Link>
           {/* <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button> */}
@@ -17,7 +17,7 @@ const NavBar = () => {
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
 
               <li className="nav-item">
-                <a className="nav-link" href="#">Leaderboard</a>
+                <Link className="nav-link" to="/leaderboard">Leaderboard</Link>
               </li>
 
               <li className="nav-item">
@@ -35,9 +35,9 @@ const NavBar = () => {
 
               <div className="spacer"></div>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="/profile">
                   <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/20625/avatar-bg.png" height="30px" width="30px" classNameName='myProfile' />
-                </a>
+                </Link>
               </li>
             </ul>
 

@@ -7,6 +7,9 @@ import AddBlog from "./screens/addblog/AddBlog";
 import Forums from "./screens/forums/Forums";
 import NewQuestionsList from "./components/questionlist/NewQuestionList";
 import CodeEditor from './screens/Editor/Editor'
+import Profile from "./screens/profile/Profile";
+import Leaderboard from "./screens/Leaderboard/myLeaderboard";
+
 
 function App() {
   return (
@@ -17,7 +20,10 @@ function App() {
       <Route exact path="/blogs" element={<Blogs/>} />
       <Route exact path="/add-blog" element={<AddBlog/>} />
       <Route exact path="/forums" element={<NewQuestionsList/>} />
-      <Route exact path="/editor" element={<CodeEditor/>} />
+      <Route exact path="/profile" element={<Profile/>} />
+      <Route exact path="/leaderboard" element={<Leaderboard/>} />
+      <Route exact path="/space/:token/editor" element={<CodeEditor/>} />
+    
    </Routes>
    </>  
   );
