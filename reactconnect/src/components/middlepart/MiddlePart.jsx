@@ -1,16 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './middlepart.css';
 import { useAuth0 } from "@auth0/auth0-react";
-import LoginButton from '../login/LoginButton';
-
-import { ApolloProvider } from '@apollo/client';
-import client from '../../apollo';
-import QuestionList from '../questionlist/NewQuestionList';
-
 const MiddlePart = () => {
   const { isLoading, isAuthenticated, error, user, loginWithRedirect, logout } = useAuth0();
 
-  
+  console.log(user);
 
   const [colors, setColors] = useState({ color1: '', color2: '', color3: '' });
 

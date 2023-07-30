@@ -80,3 +80,77 @@
 .title {
   font-size: 25px;
 }
+
+/* ChallengesTile component styles */
+.challenges-tile {
+  margin-top: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: black;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  width: 300px;
+}
+
+.challenges-tile h2 {
+  font-size: 24px;
+  padding: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.challenges-completed,
+.challenges-pending {
+  margin-top: 10px;
+}
+
+.challenges-completed h3,
+.challenges-pending h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.challenges-completed ul,
+.challenges-pending ul {
+  list-style: none;
+  padding: 0;
+}
+
+.challenges-completed li,
+.challenges-pending li {
+  margin-bottom: 5px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.challenges-completed li:before,
+.challenges-pending li:before {
+  content: "\2022";
+  position: absolute;
+  left: 0;
+}
+
+/* profile.css */
+
+/* ... Existing styles ... */
+
+/* ChallengesTile component styles */
+.challenges-tile {
+  margin-top: 30px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: black;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  width: 300px;
+  cursor: pointer;
+  transition: max-height 0.3s ease-out;
+  overflow: hidden;
+}
+
+/* ChallengesTile expanded state */
+.challenges-tile.expanded {
+  max-height: 500px; /* Adjust the value to control the expansion height */
+}
