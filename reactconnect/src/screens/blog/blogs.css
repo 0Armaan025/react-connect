@@ -1,95 +1,72 @@
-/* styles.css or your CSS file */
-body {
-    font-family: 'Helvetica', sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .amazing-blog-page {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .blog-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-  }
-  
-  .blog-card {
-    background-color: #ffffff;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    padding: 30px;
-    margin: 10px;
-    border-radius: 16px;
-    position: relative;
-    cursor: pointer;
-    overflow: hidden;
-    transform-style: preserve-3d;
-    transition: transform 0.5s ease;
-  }
-  
-  .blog-card:hover {
-    transform: translateY(-10px) rotateX(10deg);
-  }
-  
-  .blog-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, #4b0082, #ff00ff, #000000);
-    animation: gradient-line 4s linear infinite;
-  }
-  
-  @keyframes gradient-line {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(100%);
-    }
-  }
-  
-  .blog-card h2 {
-    margin-bottom: 20px;
-    color: #333333;
-    background: white;
-    font-size: 24px;
-  }
-  
-  .blog-card p {
-    color: #666666;
-    font-size: 18px;
-    background-color: white;
-  }
-  
-  .blog-card span {
-    display: block;
-    margin-top: 20px;
-    font-style: italic;
-    background: white;
-    color: #888888;
-  }
-  
-  /* Add more styles as needed */
-  
-  .add-blog-button {
-    background-color: #4CAF50; 
-    color: white; 
-    cursor: pointer;
-    border: none; 
-    padding: 12px 24px; 
-    font-size: 16px; 
-    border-radius: 8px; 
-    cursor: pointer;
-  }
-  
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
-  .add-blog-button:hover {
-    background-color: #45a049; 
-  }
+.blog_container{
+  width: 80%;
+  margin: 2rem auto;
+  border-radius: 10px;
+}
+
+.blog_title{
+  font-size: 50px;
+  font-family: Tilt Neon;
+  font-weight: 400;
+  color: aqua;
+  padding-bottom: 40px;
+  justify-content: center;
+  text-align: center;
+}
+
+.blog_card{
+  display: flex;
+  box-shadow: 0 0 2.5rem rgba(91, 90, 90, 0.945);
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.blog_card_image{
+  height: 30rem;
+  overflow: hidden;
+}
+
+.blog_img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card_content{
+  padding: 2rem;
+}
+
+.blog_author{
+  display: flex;
+  align-items: center;
+}
+
+.add-blog-button{
+  padding: 16px 32px 17px;
+  border-radius: 4px;
+  margin: 7px;
+  border: none;
+  background-color: aqua;
+  color: black;
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+  box-shadow: 0em -0.2em 0em whitesmoke inset;
+  left: 680px;
+  position: relative;
+  top: 5px;
+}
+
+.add-blog-button:hover{
+  background-color: transparent;
+  color: white;
+  border: 3px solid white;
+}
