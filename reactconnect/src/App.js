@@ -6,6 +6,7 @@ import Blogs from "./screens/blog/Blogs";
 import AddBlog from "./screens/addblog/AddBlog";
 import Forums from "./screens/forums/Forums";
 import NewQuestionsList from "./components/questionlist/NewQuestionList";
+import CodeEditor from "./screens/Editor/Editor";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Route exact path="/blogs" element={<Blogs/>} />
       <Route exact path="/add-blog" element={<AddBlog/>} />
       <Route exact path="/forums" element={<NewQuestionsList/>} />
+      <Route exact path="/editor" element={<CodeEditor/>} />
    </Routes>
    </>  
   );

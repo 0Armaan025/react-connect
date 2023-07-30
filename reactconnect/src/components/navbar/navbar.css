@@ -1,129 +1,136 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Navbar styles */
-  .navbar {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #1f1f1f;
+  color: white;
+  padding: 10px;
+}
+
+nav {
+  width: 100%;
+  display: flex !important;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar a {
+  color: whitesmoke;
+  text-decoration: none;
+  transition: color 0.5s, transform 0.3s;
+}
+
+.navbar a:hover {
+  color: white;
+  transform: scale(1.1);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.navbar-toggler {
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+}
+
+.nav-item {
+  list-style: none;
+  margin-right: 10px;
+}
+
+.createSpaceBtn {
+  padding: 0.7rem 1rem;
+  border: 1px solid white;
+  outline: none;
+  border-radius: 8px;
+  margin-left: 20px;
+  background-color: transparent;
+  color: white;
+  font-size: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.createSpaceBtn:hover {
+  background-color: white;
+  color: #1f1f1f;
+  transform: scale(1.05);
+}
+
+/* Add styles for dropdown menu */
+.dropdown-menu {
+  background-color: #1f1f1f;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 8px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+}
+
+.dropdown-item {
+  padding: 10px 20px;
+}
+
+.nav-item:hover .dropdown-menu {
+  display: block;
+}
+
+/* Add space between navbar items and user avatar */
+.spacer {
+  flex-grow: 1;
+}
+
+.myProfile {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
     background-color: #1f1f1f;
-    color: white;
-    padding: 10px;
-  }
-  
-  .navbar a {
-    color: whitesmoke;
-    text-decoration: none;
-    transition: color 0.5s, transform 0.3s;
-  }
-  
-  .navbar a:hover {
-    color: white;
-    transform: scale(1.1);
-  }
-  
-  .navbar-brand {
-    font-weight: bold;
-    font-size: 1.5rem;
-  }
-  
-  .navbar-toggler {
-    border: none;
-    background: transparent;
-    color: white;
-    font-size: 1.2rem;
-    cursor: pointer;
-  }
-  
-  .navbar-toggler:focus {
-    outline: none;
-  }
-  
-  .nav-item {
-    list-style: none;
-    margin-right: 10px;
-  }
-  
-  .createSpaceBtn {
-    padding: 0.7rem 1rem;
-    border: 1px solid white;
-    outline: none;
-    border-radius: 8px;
-    margin-left: 20px;
-    background-color: transparent;
-    color: white;
-    font-size: 1rem;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  .createSpaceBtn:hover {
-    background-color: white;
-    color: #1f1f1f;
-    transform: scale(1.05);
-  }
-  
-  /* Add styles for dropdown menu */
-  .dropdown-menu {
-    background-color: #1f1f1f;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    border-radius: 8px;
     position: absolute;
-    top: 100%;
+    top: 56px;
     left: 0;
+    width: 100%;
     display: none;
+    z-index: 1;
   }
-  
-  .dropdown-item {
-    padding: 10px 20px;
+
+  .navbar-nav.active {
+    display: flex;
   }
-  
-  .nav-item:hover .dropdown-menu {
+
+  .navbar-toggler {
     display: block;
   }
-  
-  /* Add space between navbar items and user avatar */
-  .spacer {
-    flex-grow: 1;
+
+  .nav-item {
+    margin-right: 0;
+    margin-bottom: 10px;
   }
-  
-  .myProfile {
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
+
+  .createSpaceBtn {
+    margin-left: 0;
+    margin-top: 10px;
   }
-  
-  /* Media query for responsive design */
-  @media (max-width: 768px) {
-    .navbar-nav {
-      flex-direction: column;
-      align-items: center;
-      background-color: #1f1f1f;
-      position: absolute;
-      top: 56px;
-      left: 0;
-      width: 100%;
-      display: none;
-      z-index: 1;
-    }
-  
-    .navbar-nav.active {
-      display: flex;
-    }
-  
-    .navbar-toggler {
-      display: block;
-    }
-  
-    .nav-item {
-      margin-right: 0;
-      margin-bottom: 10px;
-    }
-  
-    .createSpaceBtn {
-      margin-left: 0;
-      margin-top: 10px;
-    }
-  }
-  
+}

@@ -5,14 +5,28 @@ const cors = require("cors");
 const prettier = require("prettier"); // Import Prettier (if you haven't already)
 
 const app = express();
-const server = http.createServer(app);
-const io = socketIO(server); // Assign 'io' to the Socket.IO instance
+const httpServer = http.createServer(app);
+// const io = socketIO(server); // Assign 'io' to the Socket.IO instance
+
+const io = new socketIO.Server(httpServer, {
+  cors: {
+    origin: "*"
+  }
+});
+
 
 const PORT = process.env.PORT || 3001;
 
 let codeVersions = []; // Store code versions in memory (replace this with a database)
-// Enable CORS
-app.use(cors());
+let code = ""; // Store code 
+
+// enabling CORS for some specific origins only for all https requests
+// let corsOptions = {
+//   origin : ['*'],
+// }
+
+app.use(cors())
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // Socket.IO handling for real-time communication
@@ -22,7 +36,10 @@ io.on("connection", (socket) => {
   // Handle code synchronization
   socket.on("codeChange", (newCode) => {
     // Broadcast the new code to all connected clients except the sender
-    socket.broadcast.emit("codeChange", newCode);
+    code = newCode;
+    console.log("Received code:", newCode);
+    console.log("Whole code:", code);
+    socket.broadcast.emit("codeChange", code);
   });
 
   // Handle chat messages
@@ -72,6 +89,6 @@ app.post("/api/formatCode", (req, res) => {
   }
 });
 
-server.listen(PORT, () => {
+httpServer.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
