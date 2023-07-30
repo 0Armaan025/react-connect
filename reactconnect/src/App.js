@@ -26,6 +26,7 @@ function App() {
       <Route exact path="/leaderboard" element={<Leaderboard/>} />
       <Route exact path="/space/:token/editor" element={<CodeEditor/>} />
       <Route exact path="/editor" element={<SplitContainer/>} />
+      <Route exact path="/video" element={<VideoCall/>} />
    </Routes>
    </>  
   );
