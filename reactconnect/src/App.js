@@ -6,7 +6,7 @@ import Blogs from "./screens/blog/Blogs";
 import AddBlog from "./screens/addblog/AddBlog";
 import Forums from "./screens/forums/Forums";
 import NewQuestionsList from "./components/questionlist/NewQuestionList";
-import CodeEditor from "./screens/Editor/Editor";
+import CodeEditor from './screens/Editor/Editor'
 
 function App() {
   return (

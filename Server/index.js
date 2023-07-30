@@ -22,7 +22,15 @@ const blogSchema = new mongoose.Schema({
   content: { type: String, required: true },
   author: { type: String, required: true },
 });
+
+const spaceScheme = new mongoose.Schema({
+  name: { type: String, required: true },
+  repoLink: { type: String, required: true },
+  description: { type: String, required: true },
+});
+
 const Blog = mongoose.model('Blog', blogSchema);
+const Space = mongoose.model('Space', spaceScheme);
 
 // Middleware to parse JSON in request body
 app.use(bodyParser.json());
@@ -36,6 +44,31 @@ app.post('/api/blogs', async (req, res) => {
     res.status(201).json({ message: 'Blog created successfully' });
   } catch (error) {
     res.status(500).json({ error: 'Failed to create blog' });
+  }
+});
+
+app.post('/api/space', async (req, res) => {
+  try {
+    const { name, repoLink, description } = req.body;
+    const newBlog = new Space({ name, repoLink, description });
+    await newBlog.save();
+    res.status(201).json({ message: 'Space created successfully' });
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to create space' });
+  }
+});
+
+app.get('/api/space/:name', async (req, res) => {
+  const spaceName = req.params.name;
+  try {
+    const space = await Space.findOne({ name: spaceName });
+    if (space) {
+      res.status(200).json({ exists: true });
+    } else {
+      res.status(200).json({ exists: false });
+    }
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to check space existence' });
   }
 });
 
